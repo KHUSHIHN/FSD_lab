@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+     <script type="text/javascript">
+     
+     function maxOfThree(a,b,c)
+     {
+      if(a>=b && a>=c)
+     {
+      return a;
+     }
+     else if(b>=a && b>=c)
+     {
+      return b;
+     }
+     else
+     {
+return c;
+     }
+     }
+     </script>
+     </head>
+    <body>
+      <script type="text/javascript">
+        let fnum=parseInt(prompt("Enter first number:"));
+        let snum=parseInt(prompt("Enter second number:"));
+        let tnum=parseInt(prompt("Enter third number:"));
+
+     let result= maxOfThree(fnum,snum,tnum);
+     document.write("The output is:"+result);
+      </script>
+    </body>
+</html>
