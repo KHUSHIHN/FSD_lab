@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <form onsubmit="showInfo(); return false;">
+    Name: <input id="name"><br>
+    Age: <input id="age" type="number"><br>
+    Hometown: <input id="town"><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <p id="output"></p>
+
+  <script>
+    function showInfo() {
+      let name = document.getElementById("name").value;
+      let age = parseInt(document.getElementById("age").value);
+      let town = document.getElementById("town").value;
+      let yearBorn = new Date().getFullYear() - age;
+      document.getElementById("output").innerHTML =
+        `Hello ${name}! You were born in ${yearBorn}.<br>
+         <a href="https://www.google.com/search?q=${town}" target="_blank">
+         Search your hometown</a>`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            function charFreq(str) {
+  let freq = {};
+  for (let ch of str) {
+    freq[ch] = (freq[ch] || 0) + 1;
+  }
+  return freq;
+}
+
+        </script>
+        </head>
+        <body>
+            <script type="text/javascript">
+                let word="adcdcsdasdqwwqaaa";
+                let result=charFreq(word);
+                document.write(JSON.stringify(result));
+            </script>
+        </body>
+</html>

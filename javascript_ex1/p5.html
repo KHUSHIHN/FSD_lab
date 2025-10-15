@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            function sum(arr) {
+  let total = 0;
+  for (let num of arr) {
+    total += num;
+  }
+  return total;
+}
+
+function multiply(arr) {
+  let total = 1;
+  for (let num of arr) {
+    total *= num;
+  }
+  return total;
+}
+
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+           
+            let input=prompt("Enter an array:");
+            let arr1=input.split(",").map(Number);
+           let result1=sum(arr1);
+           document.write("The sum of array:"+result1);
+           let result_2=multiply(arr1);
+           document.write("the mul of array:"+result_2);
+    
+        </script>
+    </body>
+</html>

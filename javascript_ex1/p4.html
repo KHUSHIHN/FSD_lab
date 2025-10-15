@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            function translate(text) {
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    let ch = text[i];
+    if ("aeiou ".includes(ch.toLowerCase())) {
+      result += ch; 
+    } else {
+      result += ch + "o" + ch; 
+    }
+  }
+  return result;
+}
+
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            let text1=prompt("Enter text:");
+           let trans_result= translate(text1);
+           document.write(trans_result);
+        </script>
+    </body>
+
+</html>

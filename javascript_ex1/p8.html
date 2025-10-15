@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            function findLongestWord(words) {
+                let longest = "";
+                for (let word of words) {
+                  if (word.length > longest.length) {
+                    longest = word;
+                  }
+                }
+                return longest;
+              }
+               </script>
+    </head>
+    <script type="text/javascript">
+        let word=["apple","cherry","banana"];
+        let result=findLongestWord(word);
+        document.write(result);
+    </script>
+</html>

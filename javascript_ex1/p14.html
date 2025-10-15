@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <form onsubmit="return validateForm()">
+    <label>Name:</label><input id="name"><br>
+    <label>Username:</label><input id="username"><br>
+    <label>Password:</label><input id="password" type="password"><br>
+    <label>Confirm Password:</label><input id="confirm" type="password"><br>
+    <label>Year of Birth:</label><input id="year"><br>
+    <label>Email:</label><input id="email"><br>
+    <input type="checkbox" id="agree"> I agree<br><br>
+    <input type="submit" value="Register">
+  </form>
+
+  <script>
+    function validateForm() {
+      let user = document.getElementById("username").value;
+      let pass = document.getElementById("password").value;
+      let confirm = document.getElementById("confirm").value;
+      let email = document.getElementById("email").value;
+      let year = document.getElementById("year").value;
+      let agree = document.getElementById("agree").checked;
+
+      if (!user || !pass || !confirm || !email) {
+        alert("All fields are required!");
+        return false;
+      }
+      if (pass !== confirm) {
+        alert("Passwords do not match!");
+        return false;
+      }
+      if (!email.includes("@")) {
+        alert("Invalid email format!");
+        return false;
+      }
+      if (year < 1900 || year > 2000 || year.length !== 4) {
+        alert("Year must be between 1900 and 2000 (4 digits).");
+        return false;
+      }
+      if (!agree) {
+        alert("Please agree to terms and conditions!");
+        return false;
+      }
+      alert("Registration successful!");
+      return true;
+    }
+  </script>
+</body>
+</html>

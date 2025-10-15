@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <script>
+    let names = [];
+    while (true) {
+      let name = prompt("Enter a name (Cancel to stop):");
+      if (name === null) break;
+      names.push(name);
+    }
+    names.sort();
+    document.write("<h3>Sorted Names:</h3>");
+    for (let i = 0; i < names.length; i++) {
+      document.write((i + 1) + ". " + names[i] + "<br>");
+    }
+  </script>
+</body>
+</html>

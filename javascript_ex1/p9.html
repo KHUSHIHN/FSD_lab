@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript">
+        function filterLongWords(word,i)
+        {
+            return word.filter(word=>word.length>i);
+        }
+
+    </script>
+    <body>
+        <script type="text/javascript">
+        let result=filterLongWords(["apple","fun"],3);
+        document.write(result);
+        </script>
+    </body>
+</html>
