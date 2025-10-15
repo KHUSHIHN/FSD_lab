@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>FixStart Function</title></head>
+<body>
+  <h2>FixStart – Open Console</h2>
+
+  <script>
+    function fixStart(str) {
+      let first = str[0];
+      let newStr = first + str.slice(1).replaceAll(first, "*");
+      return newStr;
+    }
+
+    console.log(fixStart("babble"));
+  </script>
+</body>
+</html>

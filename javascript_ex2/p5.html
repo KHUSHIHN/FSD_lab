@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Not Bad Function</title></head>
+<body>
+  <h2>Not Bad – Open Console</h2>
+
+  <script>
+    function notBad(str) {
+      let notIndex = str.indexOf("not");
+      let badIndex = str.indexOf("bad");
+      if (notIndex !== -1 && badIndex > notIndex) {
+        return str.slice(0, notIndex) + "good" + str.slice(badIndex + 3);
+      }
+      return str;
+    }
+
+    console.log(notBad("This dinner is not that bad!"));
+    console.log(notBad("This movie is not so bad!"));
+    console.log(notBad("This dinner is bad!"));
+  </script>
+</body>
+</html>

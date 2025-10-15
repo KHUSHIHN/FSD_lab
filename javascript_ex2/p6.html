@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Pluralizer</title></head>
+<body>
+  <h2>Pluralizer – Open Console</h2>
+
+  <script>
+    function pluralize(noun, number) {
+      if (number === 1 || noun === "sheep" || noun === "geese") {
+        return `${number} ${noun}`;
+      } else {
+        return `${number} ${noun}s`;
+      }
+    }
+
+    console.log(pluralize("cat", 5));
+    console.log(pluralize("dog", 1));
+    console.log(pluralize("sheep", 4));
+  </script>
+</body>
+</html>

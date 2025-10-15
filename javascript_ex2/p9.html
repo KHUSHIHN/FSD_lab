@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Recipe Card</title></head>
+<body>
+  <h2>Recipe Card – Open Console</h2>
+
+  <script>
+    let recipe = {
+      title: "Mole",
+      servings: 2,
+      ingredients: ["cinnamon", "cumin", "cocoa"]
+    };
+
+    console.log(recipe.title);
+    console.log(`Serves: ${recipe.servings}`);
+    console.log("Ingredients:");
+    for (let item of recipe.ingredients) {
+      console.log(item);
+    }
+  </script>
+</body>
+</html>

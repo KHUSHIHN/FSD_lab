@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>Word Guessing Game</title></head>
+<body>
+  <h2>Simple Word Guessing Game – Open Console</h2>
+
+  <script>
+    let word = ['F', 'O', 'X'];
+    let guessed = ['_', '_', '_'];
+
+    function guessLetter(letter) {
+      let found = false;
+      for (let i = 0; i < word.length; i++) {
+        if (word[i] === letter.toUpperCase()) {
+          guessed[i] = letter.toUpperCase();
+          found = true;
+        }
+      }
+      console.log(guessed.join(""));
+      if (found) console.log("Good guess!");
+      else console.log("Try again!");
+      if (!guessed.includes('_')) console.log("Congratulations! You found the word!");
+    }
+
+    guessLetter('f');
+    guessLetter('o');
+    guessLetter('x');
+  </script>
+</body>
+</html>
